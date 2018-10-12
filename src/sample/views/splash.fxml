@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.ProgressBar?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane prefHeight="400.0" prefWidth="600.0" xmlns="http://javafx.com/javafx/9.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="sample.controller.Splash">
+   <children>
+      <Label fx:id="lblprog" layoutX="514.0" layoutY="326.0" text="0%">
+         <font>
+            <Font size="22.0" />
+         </font>
+      </Label>
+      <ImageView fitHeight="266.0" fitWidth="276.0" layoutX="167.0" layoutY="14.0" pickOnBounds="true" preserveRatio="true">
+         <image>
+            <Image url="@../../imagenes/cargando.gif" />
+         </image>
+      </ImageView>
+      <ProgressBar fx:id="prog" layoutX="46.0" layoutY="332.0" prefHeight="20.0" prefWidth="452.0" progress="0.0" />
+   </children>
+</AnchorPane>

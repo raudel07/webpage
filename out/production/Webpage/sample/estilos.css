@@ -1,0 +1,43 @@
+.fondo {
+  -fx-background-color:#1c1c1c;
+}
+.menu{
+-fx-background-color: rgb(50,50,50);
+}
+.menu .label{
+-fx-text-fill:#FFFFFF;
+}
+.progress-bar> .track{
+  -fx-text-box-border: #F69C95;
+  -fx-control-inner-background: #F69C95;
+}
+.keyword {
+    -fx-fill: purple;
+    -fx-font-weight: bold;
+}
+.semicolon {
+    -fx-font-weight: bold;
+}
+.paren {
+    -fx-fill: firebrick;
+    -fx-font-weight: bold;
+}
+.bracket {
+    -fx-fill: darkgreen;
+    -fx-font-weight: bold;
+}
+.brace {
+    -fx-fill: teal;
+    -fx-font-weight: bold;
+}
+.string {
+    -fx-fill: blue;
+}
+
+.comment {
+	-fx-fill: cadetblue;
+}
+
+.paragraph-box:has-caret {
+    -fx-background-color: #f2f9fc;
+}
