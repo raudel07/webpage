@@ -19,6 +19,6 @@
             <Image url="@../../imagenes/cargando.gif" />
          </image>
       </ImageView>
-      <ProgressBar fx:id="prog" layoutX="46.0" layoutY="332.0" prefHeight="20.0" prefWidth="452.0" progress="0.0" />
+      <ProgressBar fx:id="prog" layoutX="46.0" layoutY="332.0" prefHeight="20.0" prefWidth="452.0" progress="0.0" stylesheets="@../estilos.css" />
    </children>
 </AnchorPane>

@@ -2,10 +2,10 @@
   -fx-background-color:#1c1c1c;
 }
 .menu{
--fx-background-color: rgb(50,50,50);
+-fx-background-color: rgb(220, 220, 220);
 }
 .menu .label{
--fx-text-fill:#FFFFFF;
+-fx-text-fill: #212121;
 }
 .progress-bar> .track{
   -fx-text-box-border: #F69C95;

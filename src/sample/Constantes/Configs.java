@@ -11,8 +11,9 @@ import java.util.regex.Pattern;
 public final class Configs {
     public static  final String UserName="";
     public static final String[] KEYWORDS = new String[] {
-            "marco","forma","textgrande","textpeque","texttachado","tabla","variable","cuerpo",
-            "negritas","titulo","centrar","forma","IMG"
+           "inicio","fin","negritaI","negritaF","parrafoI","parrafoF","tituloI","tituloF",
+            "salto","menunavI","menunavF","ubic","encabezadoI","encabezadoF","piepagI","piepagF","articuloI","articuloF",
+            "seccionI","seccionF","Espacioblanco"
     };
 
     public static final String KEYWORD_PATTERN = "\\b(" + String.join("|", KEYWORDS) + ")\\b";
@@ -34,26 +35,23 @@ public final class Configs {
     );
 
     public static final String sampleCode = String.join("\n", new String[] {
-            "package com.example;",
+            "(inicio)",
             "",
-            "import java.util.*;",
+            "(encabezadoI)",
             "",
-            "public class Foo extends Bar implements Baz {",
+            "(tituloI)\"Hola mundo\"(tituloF)",
             "",
-            "    /*",
-            "     * multi-line comment",
-            "     */",
-            "    public static void main(String[] args) {",
-            "        // single-line comment",
-            "        for(String arg: args) {",
-            "            if(arg.length() != 0)",
-            "                System.out.println(arg);",
-            "            else",
-            "                System.err.println(\"Warning: empty string as argument\");",
-            "        }",
-            "    }",
+            "(encabezadoF)",
             "",
-            "}"
+            "(articuloI)",
+            "",
+            "(parrafoI)\"bienvenido a webpage espero que eches a bolar al maximo tu imaginacion\"(parrafoF)",
+            "",
+            "(parrafoI)\"realiza cualquier idea que se te venga a la mente\"(parrafoF)",
+            "",
+            "(articuloF)",
+            "",
+            "(fin)"
     });
     public static StyleSpans<Collection<String>> computeHighlighting(String text) {
         Matcher matcher = PATTERN.matcher(text);
@@ -78,7 +76,16 @@ public final class Configs {
         return spansBuilder.create();
     }
     public static String[] EXPRECIONES={
-      "[a-zA-Z]{1,3}",
-            "[0-9]{2}"
+            "[(]inicio[)]|([\\s]+|(?![\\s]))[(]inicio[)]//([\\w]+[ ]+)+|[(]fin[)]//[\\w]+",
+            "[(]fin[)]|[(]fin[)]//([\\w]+[ ]+)+|[(]fin[)]//[\\w]+",
+            "[(]encabezadoI[)]|[(]encabezadoI[)]//([\\w]+[ ]+)+|//[\\w]+",
+            "[(]encabezadoF[)]|[(]encabezadoF[)]//([\\w]+[ ]+)+|//[\\w]+",
+            "[(]tituloI[)][\"]([\\w]+[ ]+|[\\w]+)+[\"][(]tituloF[)]|[(]tituloI[)][\"]([\\w]+[ ]+|[\\w]+)+[\"][(]tituloF[)]//([\\w]+[ ]+)+|//[\\w]+",
+            "[(]piepagI[)]|[(]piepagI[)]//([\\w]+[ ]+)+|//[\\w]+",
+            "[(]piepagF[)]|[(]piepagF[)]//([\\w]+[ ]+)+|//[\\w]+",
+            "[(]articuloI[)]|[(]articuloI[)]//([\\w]+[ ]+)+|//[\\w]+",
+            "[(]articuloF[)]|[(]articuloF[)]//([\\w]+[ ]+)+|//[\\w]+",
+            "[(]parrafoI[)][\"]([\\w]+[ ]+|[\\w]+)+[\"][(]parrafoF[)]|[(]parrafoI[)][\"]([\\w]+[ ]+|[\\w]+)+[\"][(]parrafoF[)]//([\\w]+[ ]+)+|//[\\w]+",
+            "([\\s]+|(?![\\s]))//([\\s]+|(?![\\s]))([\\w]+[ ]+)+|([\\s]+|(?![\\s]))//([\\s]+|(?![\\s]))[\\w]+"
     };
 }

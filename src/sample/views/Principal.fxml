@@ -1,11 +1,8 @@
 <?xml version="1.0" encoding="UTF-8"?>
 
-<?import javafx.geometry.Insets?>
 <?import javafx.scene.control.Menu?>
 <?import javafx.scene.control.MenuBar?>
 <?import javafx.scene.control.MenuItem?>
-<?import javafx.scene.control.Tab?>
-<?import javafx.scene.control.TabPane?>
 <?import javafx.scene.control.TextArea?>
 <?import javafx.scene.layout.AnchorPane?>
 <?import javafx.scene.layout.HBox?>
@@ -13,9 +10,9 @@
 
 <AnchorPane prefHeight="720.0" prefWidth="1280.0" styleClass="fondo" stylesheets="@../estilos.css" xmlns="http://javafx.com/javafx/9.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="sample.controller.Controller">
    <children>
-      <VBox prefHeight="600.0" prefWidth="960.0" AnchorPane.leftAnchor="0.0">
+      <VBox prefHeight="720.0" prefWidth="1280.0" AnchorPane.leftAnchor="0.0">
          <children>
-            <MenuBar styleClass="menu">
+            <MenuBar prefHeight="25.0" prefWidth="1208.0" style="-fx-background-color: #DCDCDC;" styleClass="menu">
               <menus>
                 <Menu mnemonicParsing="false" text="Archivo">
                   <items>
@@ -45,33 +42,17 @@
                 </Menu>
               </menus>
             </MenuBar>
-            <TabPane prefHeight="720.0" prefWidth="1280.0" tabClosingPolicy="UNAVAILABLE">
-              <tabs>
-                <Tab text="Archivo1.wp">
-                  <content>
-                    <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="180.0" prefWidth="200.0">
-                           <children>
-                              <VBox prefHeight="546.0" prefWidth="960.0" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
-                                 <children>
-                                    <HBox fx:id="paneSote" prefHeight="100.0" prefWidth="200.0" VBox.vgrow="ALWAYS" />
-                                    <TextArea fx:id="txtConsola" prefHeight="200.0" prefWidth="200.0">
-                                       <VBox.margin>
-                                          <Insets bottom="20.0" left="20.0" right="20.0" top="20.0" />
-                                       </VBox.margin>
-                                    </TextArea>
-                                 </children>
-                              </VBox>
-                           </children>
-                        </AnchorPane>
-                  </content>
-                </Tab>
-                <Tab text="Resultado">
-                  <content>
-                    <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="180.0" prefWidth="200.0" />
-                  </content>
-                </Tab>
-              </tabs>
-            </TabPane>
+        <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="546.0" prefWidth="1071.0">
+               <children>
+                  <VBox prefHeight="529.0" prefWidth="347.0" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="933.0" AnchorPane.topAnchor="0.0">
+                     <children>
+                        <HBox fx:id="paneSote" prefHeight="530.0" prefWidth="219.0" style="-fx-background-color: #757575;" />
+                     </children>
+                  </VBox>
+                  <HBox layoutX="346.0" prefHeight="530.0" prefWidth="934.0" style="-fx-background-color: #03A9F4;" />
+               </children>
+            </AnchorPane>
+            <TextArea fx:id="txtConsola" prefHeight="184.0" prefWidth="1049.0" />
          </children>
       </VBox>
    </children>
